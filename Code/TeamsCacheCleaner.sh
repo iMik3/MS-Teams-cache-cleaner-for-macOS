@@ -58,6 +58,6 @@ if (ls /Applications/Microsoft\ Teams.app > /dev/null 2>&1); then
     read -p "Press any key to exit..."
     open /Applications/Microsoft\ Teams.app
 else
-    read -p "ERROR: Microsoft Teams is not installed on the device! Press any key to exit..."
+    read -p "ERROR: Microsoft Teams is not installed on this Mac! Press any key to exit..."
 fi
 killall Terminal
