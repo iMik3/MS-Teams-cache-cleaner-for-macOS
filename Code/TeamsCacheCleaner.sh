@@ -10,13 +10,13 @@ if (ls /Applications/Microsoft\ Teams.app > /dev/null 2>&1); then
     echo "*               Michele Chiarello                *"
     echo "*            https://github.com/iMik3            *"
     echo "*                                                *"
-    echo "**************************************************"
+    echo "**************************************************\n"
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type d -delete > /dev/null 2>&1); then
-        echo "\n[CLEANED] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache"
+        echo "[CLEANED] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache"
     else
         #Latest versions of the app don't make use of this folder?
-        echo "\n[ERROR: Nothing serious...] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache" > /dev/null
+        echo "[ERROR: Nothing serious...] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache" > /dev/null
     fi
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/Cache -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/Cache -type d -delete > /dev/null 2>&1); then
@@ -61,9 +61,9 @@ if (ls /Applications/Microsoft\ Teams.app > /dev/null 2>&1); then
         echo "\n[ERROR: NOT FOUND] ~/Library/Application Support/Microsoft/Teams/tmp\n"
     fi
 
-    read -p "Press [ENTER] to restart the app."
+    read -p "Press [ENTER] to restart the app..."
     open /Applications/Microsoft\ Teams.app
 else
-    read -p "ERROR: Microsoft Teams is not installed on this Mac! Press [ENTER] to exit."
+    read -p "ERROR: Microsoft Teams is not installed on this Mac! Press [ENTER] to exit..."
 fi
 killall Terminal
