@@ -4,7 +4,13 @@ if (ls /Applications/Microsoft\ Teams.app > /dev/null 2>&1); then
 
     killall Teams > /dev/null 2>&1
 
-    echo "\n**************************************************\n*                                                *\n*             MS Teams cache cleaner             *\n*               Michele Chiarello                *\n*     michele[dot]chiarello[at]gmail[dot]com     *\n*                                                *\n**************************************************"
+    echo "\n**************************************************"
+    echo "*                                                *"
+    echo "*             MS Teams cache cleaner             *"
+    echo "*               Michele Chiarello                *"
+    echo "*            https://github.com/iMik3            *"
+    echo "*                                                *"
+    echo "**************************************************"
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type d -delete > /dev/null 2>&1); then
         echo "\n[CLEANED] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache"
