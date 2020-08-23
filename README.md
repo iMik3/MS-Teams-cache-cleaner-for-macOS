@@ -29,6 +29,6 @@ __4.__ Run the script by pasting the following command into the Terminal window 
     
 __./Downloads/TeamsCacheCleaner.sh__
 
-![Step 4](Images/55.png)
+![Step 4](Images/5.png)
 
 __5.__ The application will restart automatically.
