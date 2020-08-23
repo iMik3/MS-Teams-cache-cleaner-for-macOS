@@ -13,16 +13,16 @@ if (ls /Applications/Microsoft\ Teams.app > /dev/null 2>&1); then
     echo "**************************************************\n"
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/Application\ Cache/Cache -type d -delete > /dev/null 2>&1); then
-        echo "[CLEANED] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache"
+        echo "[CLEANED] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache\n"
     else
         #Latest versions of the app don't make use of this folder?
-        echo "[ERROR: Nothing serious...] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache" > /dev/null
+        echo "[ERROR: Nothing serious...] ~/Library/Application Support/Microsoft/Teams/Application Cache/Cache\n" > /dev/null
     fi
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/Cache -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/Cache -type d -delete > /dev/null 2>&1); then
-        echo "\n[CLEANED] ~/Library/Application Support/Microsoft/Teams/Cache"
+        echo "[CLEANED] ~/Library/Application Support/Microsoft/Teams/Cache"
     else
-        echo "\n[ERROR: NOT FOUND] ~/Library/Application Support/Microsoft/Teams/Cache"
+        echo "[ERROR: NOT FOUND] ~/Library/Application Support/Microsoft/Teams/Cache"
     fi
 
     if (find ~/Library/Application\ Support/Microsoft/Teams/blob_storage -type f -delete > /dev/null 2>&1 || find ~/Library/Application\ Support/Microsoft/Teams/blob_storage -type d -delete > /dev/null 2>&1); then
